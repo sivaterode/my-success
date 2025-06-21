@@ -13,9 +13,9 @@ Add-BitLockerKeyProtector -MountPoint "C:" -RecoveryPasswordProtector
 $RecoveryPassword = (Get-BitLockerVolume -MountPoint "C:").KeyProtector | Where-Object { $_.KeyProtectorType -eq "RecoveryPassword" } | Select-Object -ExpandProperty RecoveryPassword
 
 # Step 5: Define Network Path for Storing BitLocker Keys
-$NetworkPath = "\\192.168.24.90\system administrator\System Administration\02 SYSTEM ADMINISTRATION\BitLockerKeys"
-$Username = "toybossap.com\administrator"
-$Password = ConvertTo-SecureString "@Ibt@98" -AsPlainText -Force
+$NetworkPath = "\\servername\folderpath\"
+$Username = "domain.com\administrator"
+$Password = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
 $Credential = New-Object System.Management.Automation.PSCredential ($Username, $Password)
 
 # Step 6: Get Computer Name
