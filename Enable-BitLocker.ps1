@@ -1,3 +1,4 @@
+# This script is used to enable Bit-Locker for all network users
 # Run PowerShell as Administrator before executing this script
 
 # Step 1: Check BitLocker Volume Status
